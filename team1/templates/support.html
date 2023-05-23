@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section>
+    <div class="container py-4 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+  
+              <h3 class="mb-5">Scan to Support Recyclers</h3>
+              <div class="form-outline mb-4">
+                <button style="border: none;">
+                    <img width="170px" src="{% static 'images/qr.png' %}" alt="" />
+                </button>
+              </div>
+              <h6 style="font-size: 15px;">0x91187740cF4d1D64D6D6266b07110F15c04fc422</h6>
+  
+              <div class="form-outline mb-4">
+                <button style="border: none;">
+                    <img src="{% static 'images/1inch.png' %}" alt="" />
+                </button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

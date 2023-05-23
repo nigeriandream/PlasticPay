@@ -1,0 +1,38 @@
+
+<!-- Add a button to trigger MetaMask connection -->
+<button id="connectButton" onclick="connectMetaMask()">Connect Wallet</button>
+
+<form method="post" action="{% url 'connect_wallet' %}" id="connectForm">
+    {% csrf_token %}
+    <input type="hidden" name="ethereum_address" id="ethereumAddressInput">
+    <button type="submit" name="connectButton" style="display: none;"></button>
+    <input type="submit" id="hiddenSubmitButton" style="display: none;">
+</form>
+
+<!-- button to prompt metamask connection 
+     helper metamask javascript lib -->
+<!-- Include the MetaMask JavaScript library -->
+<script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider@1.2.0/dist/detect-provider.min.js"></script>
+
+<!-- Add JavaScript script to handle the MetaMask connection -->
+<script>
+  async function connectMetaMask() {
+    // Check if MetaMask is installed
+    if (typeof window.ethereum !== 'undefined') {
+      try {
+        // Request MetaMask to connect
+        const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+        
+        // Set the connected Ethereum address in the hidden input field
+        document.getElementById('ethereumAddressInput').value = accounts[0];
+        
+        // Trigger a click event on the hidden submit button
+        document.getElementById('hiddenSubmitButton').click();
+      } catch (error) {
+        console.error('Error connecting to MetaMask:', error);
+      }
+    } else {
+      console.log('MetaMask not detected.');
+    }
+  }
+</script>

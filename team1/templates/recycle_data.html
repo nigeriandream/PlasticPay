@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+		<style type="text/css">
+		.container {
+            margin-top: 100px;
+			width: 90%;
+			height:100%;
+			padding-top:20px;
+			padding-left:15px;
+			padding-right:15px;
+		}
+		#st-box {
+			float:left;
+			width:180px;
+			height:160px;
+		}
+		#nd-box {
+			float:left;
+			width:180px;
+			height:100%;
+			margin :20px;
+		}
+        #nd-box .rc{
+            font-family: 'Prompt';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            text-transform: capitalize;
+            color: #414141;
+        }
+		#rd-box {
+			float:right;
+			width:180px;
+			height:160px;
+		}
+        #rd-box .nb{
+            font-family: 'Prompt';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 48px;
+            color: #414141;
+        }
+        #rd-box .mt{
+            color: white;
+            background-color: #8BB336;
+            border-radius: 29%;
+            padding: 8px;
+        }
+		h1 {
+			color:Green;
+		}
+        .pt{
+            font-family: 'Prompt';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            color: #414141;
+        }
+		</style>
+
+		
+		<div class="container">
+            <h4 class="pt">Recycler Portal</h4>
+			<div id="st-box">
+				<img src="{% static 'images/Avatar.png' %}" alt="">
+			</div>
+			
+			<div id="nd-box">
+                <span  class="rc">recycler_id</span>
+                <span class="rc">0xhsrf734yjonrfg9w434rowrhfu48ry8wuf</span>
+                
+			</div>
+			
+			<div id="rd-box">
+				<h2 class="nb">496162</h2>
+                <span class="mt">RECYCLER PIN</span>
+		</div>	
+
+{% endblock %}
