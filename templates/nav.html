@@ -1,0 +1,161 @@
+{% load static %}
+<style>
+  .wrapper .logo{
+    font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: capitalize;
+  color: #343434;
+  }
+  @media (max-width: 800px) {
+    nav {
+      display: none;
+    }
+
+    nav.mobile-nav {
+      display: flex;
+    }
+
+    nav.mobile-nav.scrolled {
+      padding: 8px 100px;
+      background: var(--light-blue-color);
+      box-shadow: 0 9px 21px -5px rgba(0, 0, 0, 0.3);
+    }
+
+    .mobile-menu-container {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 100%;
+      background: var(--dark-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      transition: all 400ms ease;
+    }
+
+    .mobile-menu-container.active {
+      left: 0;
+    }
+
+    .mobile-menu-container .close-icon {
+      position: fixed;
+      top: 32px;
+      right: 100px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 400ms ease;
+    }
+
+    .mobile-menu-container.active .close-icon {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-menu-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .mobile-menu-container ul li {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .mobile-menu-container ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 700px) {
+    .wrapper {
+      padding: 0 32px;
+    }
+
+    .hero-section .left p {
+      width: 100%;
+    }
+
+    .app-section .app-buttons {
+      flex-direction: column;
+    }
+
+    nav.mobile-nav {
+      padding: 32px;
+    }
+
+    nav.mobile-nav.scrolled {
+      padding: 8px 32px;
+    }
+
+    .mobile-menu-container .close-icon {
+      right: 32px;
+    }
+  }
+</style>
+    <div class="wrapper">
+      <nav>
+        <div class="logo">PlasticPay</div>
+        <ul>
+          <li>
+            <a href="{% url 'home' %}">Home</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+
+          <li>
+            <a href="#community">Community</a>
+          </li>
+
+          <li>
+            <a href="#ecosystem">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="{% url 'recycler_portal' %}" class="btn btn-primary btn dark">Recyclers’ Portal</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="mobile-nav">
+        <div class="logo">PlasticPay</div>
+        <div class="menu-icon">
+          <img src="images/menu-icon.svg" alt="" />
+        </div>
+      </nav>
+
+      <div class="mobile-menu-container">
+        <div class="close-icon">
+          <img src="images/close-icon.svg" alt="" />
+        </div>
+
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+
+          <li>
+            <a href="#">Community</a>
+          </li>
+
+          <li>
+            <a href="#">Ecosystem</a>
+          </li>
+
+          <li>
+            <a href="#" class="btn dark">Recyclers’ Portal</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+

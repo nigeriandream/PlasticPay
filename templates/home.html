@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  .wrapper h1 {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 48px;
+    text-transform: capitalize;
+    color: #1086C3;
+    text-align: center;
+  }
+
+  h2 {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: capitalize;
+    color: #414141;
+  }
+
+  .wrapper .app-section p {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: 275;
+    font-size: 48px;
+    text-transform: capitalize;
+    color: #1086C3;
+  }
+
+  @media (max-width: 700px) {
+    .img {
+      width: 300px;
+    }
+
+    a {
+      margin-top: 15px;
+    }
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h1 style="font-family: Prompt; font-size: 55px; line-height: 125%; color: #414141; font-weight: 600;">
+        34 ITEMS RECYCLED <br />
+        <span style="font-family: 40px; font-weight: 400; color: #8BB336; text-transform: capitalize;">...and
+          counting.</span>
+      </h1>
+
+      <p style="font-size: 20px; font-weight: 400; line-height: 36px;">
+        Our blockchain-based platform incentivizes you to recycle
+        with digital tokens that can be exchanged for discounts or cryptocurrencies.
+      </p>
+
+      <a href="{% url 'recycler_portal' %}" class="btn-primary btn dark">Recyclers’ Portal</a>
+      <a href="{% url 'support_recycler' %}" class="btn btn-outline-info" style="color: black;">Support Recyclers</a>
+    </div>
+    <div class="col-sm">
+      <img class="img" width="400px" src="{% static 'images/hero-image.png' %}" alt="" />
+    </div>
+  </div>
+</div>
+<div class="container" style="padding: 0;">
+  <h1 style="text-align: center;">About PlasticPay</h1>
+</div>
+<div class="container" style="padding-top: 0;">
+  <div class="row">
+    <div class="col-sm">
+      <img class="img" src="{% static 'images/hero-image2.png' %}" alt="" />
+    </div>
+    <div class="col-sm">
+      <div class="container" style="padding-bottom: 0;">
+        <h2>Get rewarded for reducing waste</h2>
+      </div>
+
+      <div class="features">
+        <p style="text-align: right; color: #414141;">
+          Welcome to PlasticPay, the platform that encourages sustainable practices
+          by incentivizing recycling, rewarding you with digital tokens that can be
+          exchanged for discounts or cryptocurrencies. With PlasticPay, you can make a
+          positive impact on the environment while enjoying the benefits of our rewards program.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="padding-top: 0; padding-bottom: 0;">
+  <div class="row">
+    <div class="col-sm">
+      <h2 style="text-align: left;">Transparency and accountability in the recycling process</h2>
+      <p style="text-align: left; color: #414141;">
+        We use blockchain technology to ensure transparency and accountability
+        in the recycling process, enabling us to monitor the number of plastic
+        bottles recycled and the number of tokens awarded. This system promotes
+        good health and well-being, decent work and economic growth, and
+        mitigates the dangers of climate change due to environmental pollution.
+      </p>
+    </div>
+    <div class="col-sm">
+      <img class="img" src="{% static 'images/hero-image3.png' %}" alt="" />
+    </div>
+    <a href="{% url 'recycle_data' %}" class="btn-primary btn dark">View Recycle Data</a>
+  </div>
+</div>
+
+{% include 'team.html' %}
+<footer>
+  <div class="wrapper">
+    <div class="links-container">
+      <div class="links">
+        <h3>Quick Links</h3>
+
+        <p>Meet the Team</p>
+
+        <div class="app-buttons">
+          <div style="border-radius: 30px;" class="app-btn">
+            <img src="{% static 'images/name1.png' %}" alt="" />
+            <div>
+              <h3>Emmanuel Effiong </h3>
+              <h5 class="company">Blockchain Engineer</h5>
+            </div>
+          </div>
+          <div style="border-radius: 30px;" class="app-btn">
+            <img src="{% static 'images/name1.png' %}" alt="" />
+            <div>
+              <h3>Ozor Awachie</h3>
+              <h5 class="company">Product Designer</h5>
+            </div>
+          </div>
+        </div>
+        <div class="app-buttons">
+          <div style="border-radius: 30px;" class="app-btn">
+            <img src="{% static 'images/mahmud.png' %}" alt="" />
+            <div>
+              <h3>Mahmoud Umar</h3>
+              <h5 class="company">FrontEnd Engineer</h5>
+            </div>
+          </div>
+          <div style="border-radius: 30px;" class="app-btn">
+            <img src="{% static 'images/name1.png' %}" alt="" />
+            <div>
+              <h3>Regina Owan</h3>
+              <h5 class="company">Technical Writer</h5>
+            </div>
+          </div>
+        </div>
+        <div class="app-buttons">
+          <div style="border-radius: 30px;" class="app-btn">
+            <img src="{% static 'images/name1.png' %}" alt="" />
+            <div>
+              <h3>Onyekachi K. A.</h3>
+              <h5 class="company">Technical Writer</h5>
+            </div>
+          </div>
+          <div style="border-radius: 30px;" class="app-btn">
+            <img src="{% static 'images/name1.png' %}" alt="" />
+            <div>
+              <h3>Elona Erezi</h3>
+              <h5 class="company">Technical Writer</h5>
+            </div>
+          </div>
+        </div>
+        </section>
+      </div>
+      <footer>
+        <div class="wrapper">
+          <div class="links-container">
+            <div class="links">
+              <h3>Quick Links</h3>
+
+              <ul>
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+
+                <li>
+                  <a href="#">Community</a>
+                </li>
+                <li>
+                  <a href="#">Ecosystem</a>
+                </li>
+
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+
+                <li>
+                  <a href="#">Terms & Conditions</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="links">
+              <h3>Contact Us</h3>
+
+              <ul>
+                <li>contact@gmail.com</li>
+              </ul>
+
+              <div class="social">
+                <a href="#">
+                  <img src="{% static 'images/facebook-logo.svg' %}" alt="" />
+                </a>
+
+                <a href="#">
+                  <img src="{% static 'images/instagram-logo.svg' %}" alt="" />
+                </a>
+              </div>
+
+              <form action="#">
+                <input type="email" placeholder="Email Address" />
+                <button class="submit-btn">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <p class="copyright">PlasticPay © 2023</p>
+        </div>
+      </footer>
+      {% endblock %}
